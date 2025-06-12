@@ -60,5 +60,337 @@
           <span class="visually-hidden">Select a color scheme</span>
         </button>
       </div>
+      <div class="theme-container">
+        <button class="light theme-select" id="light-select" onclick="setTheme('light')" aria-label="Set light theme">
+          <div class="theme-label">
+            Light
+          </div>
+          <div class="theme">
+            <div class="color background"></div>
+            <div class="color shade-100"></div>
+            <div class="color shade-300"></div>
+            <div class="color shade-500"></div>
+            <div class="color text"></div>
+          </div>
+        </button>
+        <button class="dark theme-select" id="dark-select" onclick="setTheme('dark')"
+          onkeydown="(e) => setThemeKey(e, 'dark')" aria-label="Set dark theme">
+          <div class="theme-label">
+            Dark
+          </div>
+          <div class="theme">
+            <div class="color background"></div>
+            <div class="color shade-100"></div>
+            <div class="color shade-300"></div>
+            <div class="color shade-500"></div>
+            <div class="color text"></div>
+          </div>
+        </button>
+        <button class="brown theme-select" id="brown-select" onclick="setTheme('brown')" aria-label="Set brown theme">
+          <div class="theme-label">
+            Brown
+          </div>
+          <div class="theme">
+            <div class="color background"></div>
+            <div class="color shade-100"></div>
+            <div class="color shade-300"></div>
+            <div class="color shade-500"></div>
+            <div class="color text"></div>
+          </div>
+        </button>
+        <button class="green theme-select" id="green-select" onclick="setTheme('green')" aria-label="Set green theme">
+          <div class="theme-label">
+            Green
+          </div>
+          <div class="theme">
+            <div class="color background"></div>
+            <div class="color shade-100"></div>
+            <div class="color shade-300"></div>
+            <div class="color shade-500"></div>
+            <div class="color text"></div>
+          </div>
+        </button>
+        <button class="pink theme-select" id="pink-select" onclick="setTheme('pink')" aria-label="Set pink theme">
+          <div class="theme-label">
+            Pink
+          </div>
+          <div class="theme">
+            <div class="color background"></div>
+            <div class="color shade-100"></div>
+            <div class="color shade-300"></div>
+            <div class="color shade-500"></div>
+            <div class="color text"></div>
+          </div>
+        </button>
+        <button class="neon theme-select" id="neon-select" onclick="setTheme('neon')" aria-label="Set pink theme">
+          <div class="theme-label">
+            Neon
+          </div>
+          <div class="theme">
+            <div class="color background"></div>
+            <div class="color shade-100"></div>
+            <div class="color shade-300"></div>
+            <div class="color shade-500"></div>
+            <div class="color text"></div>
+          </div>
+        </button>
+      </div>
+    </div>
+  </nav>
+  <main id="main">
+    <section id="about" class="container">
+      <div class="intro-container">
+        <div class="intro-image">
+          <img src="./static/images/about/portrait.png" alt="Noor Ansari">
+        </div>
+        <div class="intro">
+          <h1 class="section-title">Hello, I'm Noor Ansari &#128578;</h1>
+          <p class="bold-text"> I am an undergraduate student at the University of Virginia graduating in May 2025. <br />
+            I enjoy building websites, developing apps, and solving complex problems!</p>
+        </div>
+      </div>
+    </section>
+    <section id="history" class="container inner-container">
+      <details>
+        <summary>
+          <h2 class="subsection-title">
+            History
+          </h2>
+        </summary>
+        <div class="main-text">
+          <p>
+            I first started coding in high school after participating in a Girls Who Code workshop for beginners interested in learning how to code.</p>
+          <p>I began learning HTML/CSS and JavaScript where I began my passion in writing code and developing websites. </p>
+          </p>
+          <p>
+            My interest in Computer Science stems from the different ways I can solve a problem and use it to create something meaningful. I value working in a collaborative nature for this reason as 
+            I can build with others and offer one another different perspectives.
+          </p>
+          <p>
+            I am constantly trying to learn new technologies and concepts! I enjoy building projects to reflect my understanding and hopefully tackle a problem head on that needs to be addressed!
+          </p>
+          <p>
+            I am very dedicated to diversity and inclusion in the tech space so I try to <a
+              href="#volunteering">volunteer my time</a> and support initiatives targeted
+            towards minorities and provide mentorship in any areas I can.
+          </p>
+        </div>
+      </details>
+    </section>
+    <section id="experience" class="container inner-container">
+      <details>
+        <summary>
+          <h2 class="subsection-title">
+            Experience
+          </h2>
+        </summary>
+        <div class="main-text">
+
+          <div class="text">
+            <h3 class="text-header"><b>Freelance</b> — <a href="https://www.prideandjoycleaning.com/" target="_blank"
+                rel="noopener">Pride & Joy Cleaning Services</a> </h3>
+            <p class="text-subtitle">2025 </p>
+            <ul>
+              <li>Created a fully responsive website for a business using HTML/CSS.</li>
+            </ul>
+          </div>
+          
+          <div class="text">
+            <h3 class="text-header"><b>Freelance</b> — <a href="https://islamiccenterofhenrico.com/" target="_blank"
+                rel="noopener">Islamic Center of Henrico</a> </h3>
+            <p class="text-subtitle">2024 </p>
+            <ul>
+              <li>Developed a fully responsive website for the Islamic Center of Henrico using HTML/CSS and Stripe for secure donation payments.</li>
+            </ul>
+          </div>
       
-    </body>
+          <div class="text">
+            <h3 class="text-header"><b>Student Teacher</b> — Girls Who Code</h3>
+            <p class="text-subtitle">2022 - 2024 </p>
+            <ul>
+              <li>Taught high school students foundational programming concepts in Python, JavaScript, HTML/CSS, and web development through hands-on, project-based learning.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </details>
+    </section>
+    <section id="leadership" class="container inner-container">
+      <details>
+        <summary>
+          <h2 class="subsection-title">
+            Leadership
+          </h2>
+        </summary>
+        <div class="main-text">
+          <div class="text">
+            <h3 class="text-header"><b>Educational Outreach Initiative Developer</b> — Kenya</h3>
+            <p class="text-subtitle">2024 </p>
+            <ul>
+              <li>Led the design and development of open-source, low-cost 3D printers to expand access to educational
+                 tools in Kenya, using Python, 3D CAD modeling, and process optimization for affordability and scalability.
+
+              </li>
+            </ul>
+          </div>
+          <div class="text">
+            <h3 class="text-header"><b>Public Relations Chair</b> — Girls Who Code </h3>
+            <p class="text-subtitle">2024 - PRESENT </p>
+            <ul>
+              <li>Designed campaign materials using Canva and leveraged data analysis to optimize content reach, 
+                while collaborating with industry partners to host technical workshops and speaker events promoting women in tech. (@gwcuva)
+              </li>
+            </ul>
+          </div>
+          <div class="text">
+            <h3 class="text-header"><b>Social Media Director</b> — Take Back the Night</a> </h3>
+            <p class="text-subtitle">2023 - PRESENT </p>
+            <ul>
+              <li>Created and led social media campaigns across Instagram, Twitter, and Facebook to raise awareness about sexual violence, 
+                increasing online engagement by 60% and in-person participation by 40%. (@tbtnuva)
+              </li>
+            </ul>
+          </div>
+        </div>
+      </details>
+    </section>
+    <section id="volunteering" class="container inner-container">
+      <details>
+        <summary>
+          <h2 class="subsection-title">
+            Volunteering
+          </h2>
+        </summary>
+        <div class="main-text">
+          <div class="text">
+            <h3 class="text-header"><b>Workshop Instructor</b> 
+            </h3>
+            <p class="text-subtitle">AUGUST 2024 - DECEMBER 2024 | Charlottesville, Virginia </p>
+            <ul>
+              <li>Taught students aged 9 to 13 years the basics of coding in Python. Students were first introduced to the syntax of Scratch to gain familiarity 
+                and then transitioned to beginning to code in Python.
+              </li>
+            </ul>
+          </div>
+          <div class="text">
+            <h3 class="text-header"><b>Web Development Teacher</b> — Twin Hickory Elementary School
+            </h3>
+            <p class="text-subtitle">APRIL – JUNE 2023 | Richmond, Virginia</p>
+            <ul>
+              <li>Taught the basics of web development to children between the ages of 9 to 11 years. 
+              </li>
+            </ul>
+          </div>
+          <div class="text">
+            <h3 class="text-header"><b>Volunteer</b> — Helping Hands
+            </h3>
+            <p class="text-subtitle"> 2016 - PRESENT | Richmond, VA & Charlottesville, VA </p>
+            <ul>
+              <li>Volunteer to make and hand out food to the less fortunate.</li>
+            </ul>
+          </div>
+        </div>
+      </details>
+    </section>
+    <section id="skills" class="container inner-container">
+      <details>
+        <summary>
+          <h2 class="subsection-title">
+            Skills
+          </h2>
+        </summary>
+        <div class="main-text list">
+          <div class="text">
+            <h3 class="text-header">Languages</h3>
+            <ul class="tags">
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+              <li>TypeScript</li>
+              <li>Python</li>
+              <li>Java</li>
+              <li>C</li>
+              <li>Swift</li>
+              <li>R</li>
+              <li>SQL</li>
+
+            </ul>
+          </div>
+          <div class="text">
+            <h3 class="text-header">Libraries</h3>
+            <ul class="tags">
+              <li>React</li>
+              <li>Pandas</li>
+              <li>Numpy</li>
+              <li>Matplotlib</li>
+            </ul>
+          </div>
+          <div class="text">
+            <h3 class="text-header">Frameworks</h3>
+            <ul class="tags">
+              <li>Flask</li>
+              <li>Firebase</li>
+              <li>TensorFlow</li>
+            </ul>
+          </div>
+          <div class="text">
+            <h3 class="text-header">Tools & Systems</h3>
+            <ul class="tags">
+              <li>Git</li>
+              <li>Github</li>
+              <li>VSCode</li>
+              <li>Pycharm</li>
+              <li>IntelliJ</li>
+              <li>Docker</li>
+              <li>Jupyter Notebook</li>
+
+            </ul>
+          </div>
+        </div>
+      </details>
+    </section>
+    <div class="section-link container inner-container">
+      <a href="file:///Users/nooransari/Downloads/new.pdf" target="_blank"
+        class="link-btn">Download My Resume</a>
+    </div>
+  </main>
+  <div class="page-nav container">
+    <a href="index.html">&#8592; Home</a>
+    <a href="projects.html">Projects &#8594;</a>
+  </div>
+  <div class="wave-border top">
+    <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;" role="presentation">
+      <path d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+        style="stroke: none; fill: var(--shade-100)"></path>
+      <path class="neon-path" d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98"
+        style="stroke: var(--neon-color);fill: none;"></path>
+    </svg>
+  </div>
+  <footer>
+    </div>
+    <div class="container">
+      <div class="social-media">
+        <a href="https://github.com/ptyom" title="Github">
+          <i class="demo-icon icon-github-circled" aria-hidden="true"></i>
+          <span class="visually-hidden">Github</span>
+        </a>
+        <a href="mailto:kwp6zq@virginia.edu" title="Email">
+          <i class="fas fa-envelope" aria-hidden="true"></i>
+          <span class="visually-hidden">Email</span>
+        </a>
+        <a href="https://www.linkedin.com/in/noor--ansari/" title="LinkedIn">
+          <i class="demo-icon icon-linkedin" aria-hidden="true"></i>
+          <span class="visually-hidden">LinkedIn</span>
+        </a>
+      </div>
+      <div class="copyright">
+        &copy; Designed & Built by Noor Ansari 
+      </div>
+    </div>
+  </footer>
+</body>
+
+<script src="./static/js/index.js"></script>
+<script src="./static/js/about.js"></script>
+
+</html>
