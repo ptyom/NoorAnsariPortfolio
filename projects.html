@@ -1,1 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#1a324c">
+  <meta name="msapplication-navbutton-color" content="#1a324c">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="stylesheet" href="static/css/main.css" />
+  <link rel="stylesheet" href="static/css/page.css" />
+  <link rel="stylesheet" href="static/css/projects.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="icon" href="data:,">
+
+  
+
+  <title>Noor Ansari: Projects</title>
+
+</head>
+
+<body>
+  <a href="#main" class="skip-to-main-content">Skip to main content</a>
+  <nav class="visible">
+    <div class="container">
+      <a href="/" class="nav-logo" title="Back to Homepage">
+        Noor Ansari
+      </a>
+
+      <div class="nav-links">
+        <a href="index.html" class="link">Home</a>
+        <a href="about.html" class="link">about</a>
+        <a href="projects.html" class="link active">projects</a>
+        <a href="contact.html" class="link">contact</a>
+
+        <div class="social-media">
+          <a href="https://github.com/ptyom" title="Github">
+                        <i class="demo-icon icon-github-circled" aria-hidden="true"></i>
+            <span class="visually-hidden">Github</span>
+          </a>
+          <a href="mailto:n.ansarin24@gmail.com" title="Email">
+            <i class="fas fa-envelope" aria-hidden="true"></i>
+            <span class="visually-hidden">Email</span>
+          </a>
+          <a href="https://www.linkedin.com/in/ansarinoor/" title="LinkedIn">
+            <i class="demo-icon icon-linkedin" aria-hidden="true"></i>
+            <span class="visually-hidden">LinkedIn</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="nav-controls">
+        <button id="menu-display" title="Show Menu" class="allof">
+
+        </button>
+        <button id="theme-display" title="Select a color scheme" class="control">
+          <i aria-hidden="true" class="demo-icon icon-cog"></i>
+          <span class="visually-hidden">Select a color scheme</span>
+        </button>
+      </div>
+      <div class="theme-container">
+        <button class="light theme-select" id="light-select" onclick="setTheme('light')" aria-label="Set light theme">
+          <div class="theme-label">
+            Light
+          </div>
+          <div class="theme">
+            <div class="color background"></div>
+            <div class="color shade-100"></div>
+            <div class="color shade-300"></div>
+            <div class="color shade-500"></div>
+            <div class="color text"></div>
+          </div>
+        </button>
+        <button class="dark theme-select" id="dark-select" onclick="setTheme('dark')"
+          onkeydown="(e) => setThemeKey(e, 'dark')" aria-label="Set dark theme">
+          <div class="theme-label">
+            Dark
+          </div>
+          <div class="theme">
+            <div class="color background"></div>
+            <div class="color shade-100"></div>
+            <div class="color shade-300"></div>
+            <div class="color shade-500"></div>
+            <div class="color text"></div>
+          </div>
+        </button>
+        <button class="brown theme-select" id="brown-select" onclick="setTheme('brown')" aria-label="Set brown theme">
+          <div class="theme-label">
+            Brown
+          </div>
+          <div class="theme">
+            <div class="color background"></div>
+            <div class="color shade-100"></div>
+            <div class="color shade-300"></div>
+            <div class="color shade-500"></div>
+            <div class="color text"></div>
+          </div>
+        </button>
+        <button class="green theme-select" id="green-select" onclick="setTheme('green')" aria-label="Set green theme">
+          <div class="theme-label">
+            Green
+          </div>
+          <div class="theme">
+            <div class="color background"></div>
+            <div class="color shade-100"></div>
+            <div class="color shade-300"></div>
+            <div class="color shade-500"></div>
+            <div class="color text"></div>
+          </div>
+        </button>
+        <button class="pink theme-select" id="pink-select" onclick="setTheme('pink')" aria-label="Set pink theme">
+          <div class="theme-label">
+            Pink
+          </div>
+          <div class="theme">
+            <div class="color background"></div>
+            <div class="color shade-100"></div>
+            <div class="color shade-300"></div>
+            <div class="color shade-500"></div>
+            <div class="color text"></div>
+          </div>
+        </button>
+        <button class="neon theme-select" id="neon-select" onclick="setTheme('neon')" aria-label="Set pink theme">
+          <div class="theme-label">
+            Neon
+          </div>
+          <div class="theme">
+            <div class="color background"></div>
+            <div class="color shade-100"></div>
+            <div class="color shade-300"></div>
+            <div class="color shade-500"></div>
+            <div class="color text"></div>
+          </div>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+
+  <main id="main">
+    <section class="container">
+      <h1 class="section-title">Projects <span class="title-icon">&#128187;</span></h1>
+      <p class="section-subtitle">
+        These are some of the projects I have worked on!  :
+      </p>
+    </section>
+   
+    <section id="apps" class="container">
+      <h2 class="subsection-title">
+        Projects 
+      </h2>
+      <div class="main-text project-scroll">
+        
+        <div class="project">
+          <div class="project-image">
+            <img src="./static/images/projects/studentride.png" width="50" height="50" alt="StudentRide App">
+          </div>
+          <div class="project-text">
+            <h3 class="project-title">StudentRide | 2025</h3>
+            <p>An app designed for students to schedule affordable rides around campus with verified university student drivers.</p>
+            <ul class="project-tags">
+              <li>Swift</li>
+              <li>XCode</li>
+              <li>Firebase</li>
+
+            </ul>
+            
+          </div>
+        </div>
+
+        <div class="project">
+          <div class="project-text">
+            <h3 class="project-title"> Course Reviews App | 2024</h3>
+            <p> Developed a JavaFX desktop app for course reviews with login/signup, course search, and CRUD functionality for user-submitted ratings and 
+              comments. Integrated SQLite for persistent storage and implemented input validation, error handling, and average rating calculations.
+              </p>
+
+            <ul class="project-tags">
+              <li>JavaFX</li>
+              <li>SQLite</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="project">
+          <div class="project-image">
+            <img src="./static/images/projects/space2.png" width="200" height="150" alt="Space Invaders">
+          </div>
+          <div class="project-text">
+            <h3 class="project-title">Space Invaders | 2024</h3>
+            <p>Designed and built a microcontroller-based Space Invaders game using Java, Python, and MicroBlocks
+               on the BBC micro:bit with an 8×8 NeoPixel LED display. Developed test-driven logic with JUnit and 
+               unittest, and showcased the project to John Maloney, co-creator of Scratch and MicroBlocks.
+            </p>
+            <ul class="project-tags">
+              <li>Python</li>
+              <li>Java</li>
+              <li>BBC micro:bit</li>
+              <li>NeoPixel</li>
+              <li>MicroBlocks</li>
+              <li>Unit Tests</li>
+
+            </ul>
+            <div class="project-links">
+              <a href="https://github.com/ptyom/Space-Invaders" target="_blank" rel="noopener">view 
+                project & source code</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project">
+          <div class="project-image">
+            <img src="./static/images/projects/find.png" width="200" height="150"
+              alt="Find It">
+          </div>
+          <div class="project-text">
+            <h3 class="project-title">Find it! | Hackathon App</h3>
+            <p>Created a SwiftUI mobile app leveraging Firebase to help students find local hangouts and restaurant wait times; placed 4th best overall at UVA HooHacks.
+            </p>
+            <ul class="project-tags">
+              <li>XCode</li>
+              <li>Firebase</li>
+              <li>Swift</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="project">
+          <div class="project-text">
+            <h3 class="project-title"> Course Registration System | 2024</h3>
+            <p> Implemented Java service-layer logic for course enrollment and prerequisites.
+              Used Mockito for unit testing and JUnit for integration tests, ensuring 100% branch coverage across student scheduling,
+               waitlists, and grade processing workflows.</p>
+
+            <ul class="project-tags">
+              <li>Java</li>
+              <li>JUnit 5</li>
+              <li>Mockito</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="project">
+          <div class="project-text">
+            <h3 class="project-title"> UVA Bus Route Data Layer | 2024</h3>
+            <p> Built a backend system in Java to parse JSON from public APIs, model data into objects, and persist it using SQLite with JDBC.
+              Implemented custom SQL queries, database normalization, and service logic for spatial search and route recommendations using Java, JDBC,
+               SQL, and JSON.
+              </p>
+
+            <ul class="project-tags">
+              <li>Java</li>
+              <li>JDBC</li>
+              <li>SQL</li>
+              <li>JSON</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="project">
+          <div class="project-text">
+            <h3 class="project-title"> Wordle Game Logic & Testing | 2024</h3>
+            <p> Developed a terminal-based Wordle clone in Java using Test-Driven Development, achieving full unit and integration 
+              testing using JUnit 5 and Mockito.</p>
+
+            <ul class="project-tags">
+              <li>Java</li>
+              <li>Test-Driven Development</li>
+              <li>JUnit 5</li>
+              <li>Mockito</li>
+            </ul>
+          </div>
+        </div>
+
+    
+
+        <div class="project">
+          <div class="project-image">
+            <img src="./static/images/projects/cloudr.png" width="200" height="150" alt="Cloud Research">
+          </div>
+          <div class="project-text">
+            <h3 class="project-title"> Research on Cloud Providers | 2025</h3>
+            <ul class="project-tags">
+              <li>Microsoft
+                Azure</li>
+              <li>IBM BlueCloud</li>
+              <li>Salesforce.com</li>
+              <li>Apple iCloud</li>
+            </ul>
+            <div class="project-links">
+              <a href="file:///Users/nooransari/Downloads/Cloud%20Research%20Ansari,Noor%20.pdf" target="_blank" rel="noopener">see
+                research</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project">
+          <div class="project-image">
+            <img src="./static/images/projects/aichatbot.png" width="200" height="150" alt="AI Chatbot">
+          </div>
+          <div class="project-text">
+            <h3 class="project-title"> AI Chatbot | 2024</h3>
+            <p>Developed a full-stack web chatbot using Python, Flask, NLP, and HTML/CSS to assist first-year students with campus resources.
+            </p>
+            <ul class="project-tags">
+              <li>Python</li>
+              <li>Flask</li>
+              <li>NLP libraries</li>
+              <li>HTML</li>
+              <li>CSS</li>
+            </ul>
+            <div class="project-links">
+              <a href="https://github.com/ptyom/uva-chatbot" target="_blank" rel="noopener">source
+                code</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project">
+          <div class="project-image">
+            <img src="./static/images/projects/personalweb.png" width="200" height="150" alt="Personal Portfolio">
+          </div>
+          <div class="project-text">
+            <h3 class="project-title">Personal Portfolio | 2025</h3>
+            <ul class="project-tags">
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+            </ul>
+            <div class="project-links">
+              <a href="index.html" target="_blank" rel="noopener">visit
+                site</a>
+              <a href="https://github.com/ptyom/NoorAnsariPortfolio" target="_blank" rel="noopener">source
+                code</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project">
+          <div class="project-image">
+            <img src="./static/images/projects/target.png" width="200" height="150" alt="Data Breach Analysis">
+          </div>
+          <div class="project-text">
+            <h3 class="project-title"> Data Breach Analysis on Target | 2025</h3>
+            <ul class="project-tags">
+              <li>Youtube</li>
+            </ul>
+            <div class="project-links">
+              <a href="https://www.youtube.com/watch?v=O7zMUlm3k6Q" target="_blank" rel="noopener">watch
+                video</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project">
+          <div class="project-image">
+            <img src="./static/images/projects/edepop.png" width="720" height="340"
+              alt="Depop Analysis">
+          </div>
+          <div class="project-text">
+            <h3 class="project-title">Depop Analyst & Seller</h3>
+            <p>Scaled personal e-commerce business from 3 to 6,000+ items sold in 2024, using data analysis to optimize product listings, pricing, and inventory.
+              Analyzed market trends, customer preferences, and competitor pricing to effectively drive strategic sales growth.
+              </p>
+            <ul class="project-tags">
+              <li>Python</li>
+              <li>Pandas</li>
+              <li>NumPy</li>
+              <li>Matplotlib</li>
+              <li>Jupyter Notebook</li>
+              <li>Web Scraping</li>
+            </ul>
+            
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <section class="container">
+      <h1 class="section-title">Freelance <span class="title-icon">&#128187;</span></h1>
+      <p class="section-subtitle">
+        I enjoy building products and working with clients! Here are some projects I have completed for clients  :
+      </p>
+
+      <div class="main-text project-scroll">
+        <div class="project">
+          <div class="project-image">
+            <img src="./static/images/projects/website1.png" width="720" height="340"
+              alt="Islamic Center of Henrico Website">
+          </div>
+          <div class="project-text">
+            <h3 class="project-title">Islamic Center of Henrico Donation Website</h3>
+            <ul class="project-tags">
+              <li>HTML</li>
+              <li>CSS</li>
+            </ul>
+            <div class="project-links">
+              <a href="https://islamiccenterofhenrico.com/" target="_blank" rel="noopener">visit site</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project">
+          <div class="project-image">
+            <img src="./static/images/projects/website2.png" width="720" height="340"
+              alt="Pride & Joy Cleaning Website">
+          </div>
+          <div class="project-text">
+            <h3 class="project-title">Pride & Joy Cleaning Services Website</h3>
+            <ul class="project-tags">
+              <li>HTML</li>
+              <li>CSS</li>
+            </ul>
+            <div class="project-links">
+              <a href="https://www.prideandjoycleaning.com/" target="_blank" rel="noopener">visit
+                site</a>
+            </div>
+          </div>
+        </div>
+        </div>
+
+
+    <section id="portfolios" class="container">
+      <h2 class="subsection-title">
+        Previous Portfolios (1)
+      </h2>
+      <div class="main-text project-scroll">
+        <div class="project">
+          <div class="project-image">
+            <img src="./static/images/projects/portfolio.v1.png" width="720" height="340"
+              alt="First version of my portfolio">
+          </div>
+          <div class="project-text">
+            <h3 class="project-title">Portfolio Verson 1</h3>
+            <ul class="project-tags">
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+            </ul>
+            <div class="project-links">
+              <a href="https://ptyom.github.io/Ansari-Noor-Personal-Website/" target="_blank" rel="noopener">visit site</a>
+              <a href="https://github.com/ptyom/Ansari-Noor-Personal-Website" target="_blank" rel="noopener">source
+                code</a>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </section>
+    
+
+  </main>
+  <div class="page-nav container">
+    <a href="about.html">&#8592; About</a>
+  </div>
+  <div class="wave-border top">
+    <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;" role="presentation">
+      <path d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+        style="stroke: none; fill: var(--shade-100)"></path>
+      <path class="neon-path" d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98"
+        style="stroke: var(--neon-color);fill: none;"></path>
+    </svg>
+  </div>
+
+
+  <footer>
+    <div class="container">
+      <div class="social-media">
+        <a href="https://github.com/ptyom" title="Github" target="_blank">
+                      <i class="demo-icon icon-github-circled" aria-hidden="true"></i>
+            <span class="visually-hidden">Github</span>
+        </a>
+        <a href="mailto:n.ansarin24@gmail.com" title="Email" target="_blank">
+          <i class="fas fa-envelope" aria-hidden="true"></i>
+          <span class="visually-hidden">Email</span>
+        </a>
+        <a href="https://www.linkedin.com/in/ansarinoor/" title="LinkedIn" target="_blank">
+          <i class="demo-icon icon-linkedin" aria-hidden="true"></i>
+          <span class="visually-hidden">LinkedIn</span>
+        </a>
+      </div>
+      <div class="copyright">
+        &copy; Designed & Built by Noor Ansari
+      </div>
+    </div>
+  </footer>
+</body>
+
+<script src="./static/js/index.js"></script>
+
+
+
+</html>
