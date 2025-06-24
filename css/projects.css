@@ -22,11 +22,15 @@ section {
   margin: 0;
 }
 #apps .project {
-  flex: none;
-  width: 100%;
-  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 420px;
+  background: var(--background-color, #fff);
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
 }
-
 
 .freelance-scroll {
   display: flex;
@@ -64,12 +68,12 @@ section {
 }
 
 .project-text {
-  padding: 1rem;
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
-  height: 100%;
-  position: relative; 
+  justify-content: space-between;
 }
+
 
 
 .project-title {
