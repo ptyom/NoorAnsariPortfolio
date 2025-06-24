@@ -1,11 +1,34 @@
-/* projects.css: Global styling for projects page */
+/* ────────────────────────────────────────────────────────────────
+   projects.css – Projects page layout
+──────────────────────────────────────────────────────────────── */
 
 section {
   margin: 3rem 0;
 }
 
-/* Default project-scroll layout (horizontal scroll) */
-.project-scroll {
+#apps .project-scroll {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(260px, 1fr));
+  grid-auto-rows: auto;
+  gap: 1.5rem;
+
+  /* only vertical scroll */
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  /* fit to viewport */
+  max-height: calc(100vh - 200px);
+  padding: 1rem;
+  margin: 0;
+}
+#apps .project {
+  flex: none;
+  width: 100%;
+  margin: 0;
+}
+
+
+.freelance-scroll {
   display: flex;
   overflow-x: auto;
   overflow-y: hidden;
@@ -13,33 +36,28 @@ section {
   margin: 0 -1rem;
   scroll-snap-type: x mandatory;
 }
-
-.project {
+.freelance-scroll .project {
   scroll-snap-align: center;
-  flex: 1 1 40vw;
+  flex: 0 0 40vw;
   display: flex;
   flex-direction: column;
   min-width: 40vw;
-  box-shadow: 0px 0 10px 1px rgba(0,0,0,0.2);
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
-
-.project + .project {
+.freelance-scroll .project + .project {
   margin-left: 1.5rem;
 }
 
-.project-image {
-  width: 100%;
-}
 
+.project-image { width: 100%; }
 .project-image img {
   display: block;
   width: 100%;
   height: auto;
   opacity: 0.8;
   filter: brightness(45%) grayscale(1);
-  transition: filter 1000ms;
+  transition: filter 0.5s;
 }
-
 .project:hover .project-image img,
 .project:focus-within .project-image img {
   filter: brightness(100%) grayscale(0);
@@ -47,14 +65,9 @@ section {
 
 .project-text {
   padding: 1rem;
-  height: 100%;
   display: flex;
   flex-direction: column;
-}
-
-.project-text p {
-  margin: 0 0 0.5rem;
-  font-size: 1rem;
+  height: 100%;
 }
 
 .project-title {
@@ -64,13 +77,18 @@ section {
   text-transform: uppercase;
 }
 
+.project-text p {
+  margin: 0 0 0.5rem;
+  font-size: 1rem;
+}
+
 .project-tags {
+  list-style: none;
   display: flex;
   flex-wrap: wrap;
   margin: 0.5rem 0;
   padding: 0;
 }
-
 .project-tags li {
   margin-right: 1.5rem;
   font-size: 0.7rem;
@@ -79,60 +97,30 @@ section {
 }
 
 .project-links {
-  padding-top: 1em;
   margin-top: auto;
+  padding-top: 1rem;
   color: var(--grey-text);
 }
-
 .project-links a {
-  font-size: 0.9rem;
   margin-right: 0.5rem;
-  transition: color 500ms;
+  font-size: 0.9rem;
+  transition: color 0.3s;
 }
-
 .project-links a:hover,
 .project-links a:focus {
   color: var(--text-color);
   text-decoration-color: var(--text-color);
 }
 
-.more-link {
-  margin: 0 1.5rem;
-  display: flex;
-  align-items: center;
-  scroll-snap-align: center;
-}
-
-.more-link a {
-  display: block;
-  width: max-content;
-}
-
-#apps .project-scroll {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  grid-auto-rows: auto;
-  gap: 1.5rem;
-  overflow-y: auto;
-  overflow-x: hidden;
-  max-height: 80vh;
-  padding: 1rem;
-  margin: 0;
-}
-
-#apps .project {
-  flex: none;
-  width: 100%;
-  min-width: auto;
-  margin: 0;
-}
 
 @media screen and (max-width: 720px) {
-  .project {
-    min-width: 75vw;
-  }
+  /* collapse apps to one column */
   #apps .project-scroll {
     grid-template-columns: 1fr;
     max-height: none;
+  }
+  /* freelance cards full-width */
+  .freelance-scroll .project {
+    min-width: 75vw;
   }
 }
