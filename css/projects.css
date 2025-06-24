@@ -68,7 +68,9 @@ section {
   display: flex;
   flex-direction: column;
   height: 100%;
+  position: relative; 
 }
+
 
 .project-title {
   font-size: 1em;
