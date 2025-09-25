@@ -239,7 +239,7 @@ nav .container {
   position: absolute;
   padding: 2rem;
   right: 0;
-  top: 4.5rem;
+  top: 6.5rem;
   margin-right: 1em;
   display: flex;
   flex-direction: column;
@@ -378,6 +378,41 @@ footer .copyright {
 
 .copyright .heart {
   color: var(--shade-500);
+}
+
+.nav-controls {
+  position: relative;
+}
+
+.click-arrow {
+  position: absolute;
+  top: 40px;
+  right: -46px;
+  background: var(--background-color);
+  color: var(--text-color);
+  border: 2px solid var(--shade-500);
+  border-radius: 12px;
+  padding: 6px 10px;
+  font-size: 12px;
+  font-weight: bold;
+  animation: bounce 1.5s infinite;
+  white-space: nowrap;
+  z-index: 60;
+}
+
+.click-arrow::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 8px solid transparent;
+  border-bottom-color: var(--shade-500);
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
 }
 
 @media screen and (min-width: 721px) {
